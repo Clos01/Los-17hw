@@ -61,13 +61,39 @@ This will match where it begins with a '#,' which must come first, followed by o
 OR Operator '|'
 
 It will match a 3-character long string containing a-f letters and 0-9 numbers, such as '[a-f0-9]3'.
+
 ### Character Classes
 \d is present in the given matching email code and what it will match a single letter character, a-z, after the @ sign in the email address. Basically ensuring that a letter is matched after the @ in the email and not a number or special character.
 ### Flags
+There is no regex flag in the matching email code used in this tutorial. An example of a regular expression is as follows:
+
+/regex/
+
+The slashes denote the start and end of the regular expression, respectively. A flag can be used after the slash to offer further instructions for our matching. The following are the flags:
+
+The letter g stands for "global," and it allows you to match all instances of a string that fit the regular expression's rules.
+The letter m stands for "multiline," which implies that instead of searching the full text, it will search line by line.
+The letter I, which stands for "insensitive," makes the regular expression case-insensitive, which means that capital and lower-case letters have no bearing on matching.
 
 ### Grouping and Capturing
 
+Continuing with the email matching code:
+
+`/^([a-z0-9_\.-]+)
+
+@([\da-z\.-]+)\.([a-z\.]{2,6})
+
+$/`
+
+We could talk about capturing and grouping.
+
+([a-z0-9_.-]+) is the first group that appears in our regex. This must be true before proceeding to "match" the following section of the code.
+'([da-z.-]+)' is the second group that appears in our regex. In our regex, the third group is ([a-z.]2,6).
+
+Before moving on to the next group, we must make certain that we are adhering to the prior group's requirements.
 ### Bracket Expressions
+
+
 
 ### Greedy and Lazy Match
 
