@@ -45,9 +45,24 @@ A quantifier is used to indicate how many times a certain character or set of ch
 
 Any string containing the letters a-z, 0-9, _,., or - will be matched. The quantifier '+' indicates that at least one of these must be present for a match to be made.
 ### OR Operator
+Although it is not present in the code for the stated matching email code, we will examine the following code for matching a hex code in order to discuss the OR Operator.
 
+`/^#?
+
+([a-f0-9]{6}|[a-f0-9]{3})
+
+$/`
+
+This is a regex that uses the OR Operator to match a hex code.
+This will match where it begins with a '#,' which must come first, followed by one of the following:
+
+'[a-f0-9]6' will match a 6-character string containing a-f letters and 0-9 numerals.
+
+OR Operator '|'
+
+It will match a 3-character long string containing a-f letters and 0-9 numbers, such as '[a-f0-9]3'.
 ### Character Classes
-
+\d is present in the given matching email code and what it will match a single letter character, a-z, after the @ sign in the email address. Basically ensuring that a letter is matched after the @ in the email and not a number or special character.
 ### Flags
 
 ### Grouping and Capturing
