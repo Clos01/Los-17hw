@@ -1,11 +1,13 @@
-# Title (replace with your title)
+# Title (Challenge 17 Regular Expressions Tutorial)
 
-Introductory paragraph (replace this with your text)
+The purpose of this gist is to explain what a regular expression is and how to utilize it. When attempting to match a certain character combination within a string, Regular Expressions (Regex) can be utilized. This is useful for extracting information from a body of code as well as for validating it. This tutorial, for example, will use an example code snippet that may be used to match an email. The different components of regular expressions will be covered in this lesson.
 
 ## Summary
 
 The following code will be used throughout the lesson to demonstrate how to utilize the various components of regex. Matching emails may be done with the code below. This code may be used to validate an email to ensure that it is formatted correctly.
+Matching Email-
 
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 ## Table of Contents
 
 - [Anchors](#anchors)
